@@ -41,7 +41,7 @@
             		<label for="check"><span class="icon"></span> Keep me Signed in</label>
          		</div>
           		<div class="group">
-            		<input type="submit" class="button" value="Sign In">
+            		<input type="submit" class="button" value="Sign In" onClick='display();'>
           		</div>
           		<div id="error"></div>
           	</form>
@@ -126,19 +126,20 @@ pageEncoding="ISO-8859-1"%>
 			{
 				if(pin.equals(loginPass)) //credentials verified
 				{
-					//passing control to home page
-					RequestDispatcher reqdisp1 = request.getRequestDispatcher("home.jsp");
-					reqdisp1.forward(request, response);
+					response.sendRedirect("index.html");
 				}
 			}
 		}
 		out.println("<script>");
+		out.println("function display() {");
 		out.println("document.getElementById('error').style.color = 'red';");
-		out.println("document.getElementById('error').innerText='Sorry UserName or Password error';");
+		out.println("document.getElementById('error').innerText='Sorry UserName or Password error';}");
 		out.println("</script>");
 	}
 	
-	catch(Exception e){}
+	catch(Exception e){
+		out.print(e.getMessage());
+	}
 	
 	//redirection to login page
 %>

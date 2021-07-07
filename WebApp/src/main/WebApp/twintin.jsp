@@ -26,8 +26,7 @@ pageEncoding="ISO-8859-1"%>
 		st = con.createStatement();
 		
 		st.executeUpdate("INSERT INTO `techmihirnaik`.`twintin` (`Name`, `Contact`, `email`, `company`, `address`, `targetCountry`) VALUES ('"+name+"', '"+contact+"', '"+company+"', '"+email+"', '"+address+"', '"+targetCountry+"');");
-		RequestDispatcher reqdisp1 = request.getRequestDispatcher("home.jsp");
-		reqdisp1.forward(request, response);
+		response.sendRedirect("index.html");
 	}
 	catch(Exception e){
 		out.print(e.getMessage());

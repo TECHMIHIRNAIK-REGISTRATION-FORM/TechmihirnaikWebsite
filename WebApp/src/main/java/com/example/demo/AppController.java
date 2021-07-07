@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AppController {
 	@RequestMapping("/")
-	public String displayForm() {
-		return "login.html";
+	public String displayHome() {
+		return "index.html";
 	}
 	@RequestMapping("/login")
 	public String checkLogin() {
@@ -24,5 +24,13 @@ public class AppController {
 	@RequestMapping("/contact")
 	public String loadContact() {
 		return "contact.html";
+	}
+	@RequestMapping("/courier")
+	public String loadCourier() {
+		return "courier/courier.html";
+	}
+	@RequestMapping("/technical")
+	public String loadTechnical() {
+		return "technical.html";
 	}
 }
