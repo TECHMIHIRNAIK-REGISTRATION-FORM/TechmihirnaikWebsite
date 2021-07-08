@@ -1,0 +1,23 @@
+footer {
+	background-color: #bac9cf;
+	bottom: 0;
+	color: #14181b;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 1;
+   margin-top:100px !important;/*change this when adding in your website */
+}
+li{
+	font-weight: bold;
+}
+nav .navbar-nav li a{
+    color:rgb(19, 133, 19) !important;
+    
+ }
+ nav .navbar-nav li:hover{
+        background:#7ceed3;
+        transition: 1s;
+        display: flex;
+        }

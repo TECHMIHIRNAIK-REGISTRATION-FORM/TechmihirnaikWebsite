@@ -19,7 +19,7 @@
 		}
 	</script>
 </head>
-<body>
+<body onload="display">
   <!-- login -->
   <div class="login-wrap border-radius: 15px 50px:">
     <div class="login-html">
@@ -51,25 +51,25 @@
           	</div>
         </div>
         <div class="sign-up-htm">
-        	<form action="signup" method="post">
+        	<form action="signup.jsp" method="post">
           		<div class="group">
             		<label for="user" class="label">Username</label>
-            		<input id="user" type="text" class="input" name="uname2">
+            		<input id="user" type="text" class="input" name="uname2" required>
             		<div id="errorUsername"></div>
           		</div>
           		<div class="group">
             		<label for="pass" class="label">Password :
-    					<input name="password" id="password" class="input" type="password" onkeyup='check();' />
+    					<input name="password" id="password" class="input" type="password" onkeyup='check();' required>
 					</label>
 					<br>
 					<label for="pass" class="label">Confirm Password:
-    					<input type="password" name="confirm_password" id="confirm_password" class="input" onkeyup='check();' /> 
+    					<input type="password" name="confirm_password" id="confirm_password" class="input" required onkeyup='check();' required> 
     					<span id='message'></span>
 					</label>
           		</div>
           		<div class="group">
             		<label for="pass" class="label">Email Address</label>
-            		<input id="pass" type="email" class="input" name="email">
+            		<input id="pass" type="email" class="input" name="email" required>
             		<div id="errorEmail"></div>
           		</div>
           		<div class="group">
@@ -101,7 +101,7 @@ pageEncoding="ISO-8859-1"%>
 		//registering the driver class
 		Class.forName("com.mysql.jdbc.Driver");
 		//establishing connection to the database
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techmihirnaik","root","2001hridya");
+		Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/u870519312_techmihirnaik","u870519312_admin","Admin@2410");
 		Statement st = con.createStatement();
 		ResultSet rs = null;
 		String query = "select * from userprofile";
@@ -139,11 +139,13 @@ pageEncoding="ISO-8859-1"%>
 		}
 		if(update==1)
 		{
-			st.executeUpdate("INSERT INTO `techmihirnaik`.`userprofile` (`Username`, `Password`, `Email`) VALUES ('"+username+"', '"+password+"', '"+email+"');");
-			RequestDispatcher reqdisp1 = request.getRequestDispatcher("home.jsp");
+			st.executeUpdate("INSERT INTO `u870519312_techmihirnaik`.`userprofile` (`Username`, `Password`, `Email`) VALUES ('"+username+"', '"+password+"', '"+email+"');");
+			RequestDispatcher reqdisp1 = request.getRequestDispatcher("login");
 			reqdisp1.forward(request, response);
 		}
 	}
-	catch(Exception e){}
+	catch(Exception e){
+		e.getMessage();
+	}
 
 %>

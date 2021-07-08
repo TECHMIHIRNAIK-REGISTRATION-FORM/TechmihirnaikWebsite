@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postica</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="assets/techmihirnaik.jpeg">
+    <link rel="stylesheet" href="assets/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/slicknav.min.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="assets/" type="text/css">
+    <link rel="stylesheet" href="assets/owl.carousel.min.css" type="text/css">
+    
+  </head>
+
+  <body>
+    <!-- Header Section Begin -->
+    <header class="header-section">
+      <div class="container">
+          <div class="logo">
+              <a href="./index.html">
+                  <img src="assets/logo.jpeg" alt="">
+              </a>
+          </div>
+          <div class="nav-menu">
+              <nav class="mainmenu mobile-menu">
+                  <ul>
+                      <li class="" style="color: #fff;"><a href="./index.html">Home</a></li>
+                      <li><a href="../about.html">About</a></li>
+                      <li class="active"><a href="courier/courier.html">Courier</a></li>
+                      <li><a href="../tech.html">Technical</a></li>
+                      <li><a href="../company.html">Company</a></li>
+                      <li><a href="../contact.html">Contacts</a></li>
+                  </ul>
+              </nav>
+              <a href="login.html" target="_blank" class="primary-btn top-btn" style="background: #202020;"><i class="fa fa-sign-in"></i> Login</a>
+          </div>
+          <div id="mobile-menu-wrap"></div>
+      </div>
+  </header>
+  <!-- Header End -->
+  
+  <!-- <div class="container" style="width: 100%;">
+    <img src="../img/img.png">
+  </div> -->
+  
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleCaptions"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imga.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="imgc.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="imgb.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <section class="sect">
+      <div class="container">
+        <h1 class="heading">
+          <b
+            ><span><span style="color: #37517e">SERVICES</span></span></b
+          >
+        </h1>
+        <div class="cards-prop">
+        <div class="row" style="display:flex;justify-content:center;">
+          <div class="col">
+            <div class="card-1">
+              <div class="card" style="width: 18rem; height: 22rem;">
+                <img
+                  src="assets/delivery.jpg"
+                  class="card-img-top"
+                  alt="delivery"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Delivery</h5>
+                  <p class="card-text"></p>
+                  <p class="card-text"></p>
+                  <a href="" class="btn btn-outline-success">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mar">
+            <div class="card-2">
+              <div class="card" style="width: 18rem; height: 22rem;">
+                <img
+                  src="assets/warehousing.png"
+                  class="card-img-top"
+                  alt="warehouse"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Warehousing</h5>
+                  <p class="card-text"></p>
+                  <p class="card-text"></p>
+
+                  <a href="" class="btn btn-outline-success">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-3">
+              <div class="card" style="width: 18rem; height: 22rem">
+                <img
+                  src="assets/international-services.jpg"
+                  class="card-img-top"
+                  alt="international"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">International</h5>
+                  <p class="card-text"></p>
+                  <p class="card-text"></p>
+
+                  <a href="" class="btn btn-outline-success">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <span style="color: #1c1b1b"
+                ><i class="bi bi-emoji-smile"></i
+              ></span>
+              <span data-toggle="counter-up">300+</span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <span style="color: #1c1b1b"
+                ><i class="bi bi-folder-check"></i
+              ></span>
+              <span data-toggle="counter-up">10000+</span>
+              <p>Happy Shipping</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <span style="color: #1c1b1b"><i class="bi bi-people"></i></span>
+              <span data-toggle="counter-up">24X7</span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <span style="color: #1c1b1b"><i class="bi bi-globe"></i
+              ></span>
+              <span data-toggle="counter-up">220+</span>
+              <p>Countries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Counts Section -->
+    <section id="clients" class="clients">
+      <div class="container">
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/clients/aramex.jpeg" class="img-fluid" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img
+                src="assets/clients/bluedart.jpeg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img
+                src="assets/clients/delhivery.jpeg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/clients/FedEx.jpeg" class="img-fluid" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/clients/gati.jpeg" class="img-fluid" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img
+                src="assets/clients/shyplite.jpeg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img
+                src="assets/clients/shadowfax.jpeg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/clients/trackon.jpeg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Here are some Questions related to Techmihirnaik</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-toggle="collapse" class="collapse" href="#faq-list-1"
+                >What is Techmihirnaik?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-down icon-close"></i
+              ></a>
+              <div
+                id="faq-list-1"
+                class="collapse show"
+                data-parent=".faq-list"
+              >
+                <p>
+                  We’re a young and talented group of entrepreneurs and
+                  engineers with a groundbreaking idea that we hope will
+                  contribute towards a better tomorrow. We provide smart
+                  solutions for companies of all sizes and pride ourselves on
+                  our unparalleled, dedicated service.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-toggle="collapse" href="#faq-list-2" class="collapsed"
+                >What are the technologies that Techmihirnaik deals in?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-down icon-close"></i
+              ></a>
+              <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                <p>
+                  Stay relevant in a rapidly evolving digital world, using
+                  resources to help you design, deploy, and resource your ICT
+                  environment. Engage our world-class technical teams,
+                  regardless of where you are in your digital and technology
+                  service journey. We adopt industry-proven project and program
+                  management methodologies. This delivers precise, quality
+                  technical solutions with the ability to successfully
+                  transition and augment these services for client-retained IT
+                  organizations.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-toggle="collapse" href="#faq-list-3" class="collapsed"
+                >What are the services Techmihirnaik work in?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-down icon-close"></i
+              ></a>
+              <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                <p>
+                  We work in 3 services which are surely a pocket-friendly for
+                  sellers as well as consumers, which includes-
+                  Technical,Courier & Door-Step.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-toggle="collapse" href="#faq-list-4" class="collapsed"
+                >What are the comapnies Techmihirnaik associated with?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                <p>
+                  ekart,shadowfox,EcomExpress,FedEx,Blue Dart,Xpressbees,Indian
+                  Post
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="footer-text">
+                      <div class="ft-logo">
+                          <a href="#" class="footer-logo"><img src="assets/imgnoBg.png" alt=""></a>
+                      </div>
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">Technical</a></li>
+                          <li><a href="#">Design</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                      <div class="copyright-text">
+                          <p>
+                              Copyright &copy;
+                              <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | Managed by</i> <a href="hello@techmihirnaik.in" target="_blank">Techmihirnaik</a>
+                          </p>
+                      </div>
+                      <div class="ft-social">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-linkedin"></i></a>
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                          <a href="#"><i class="fa fa-youtube-play"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <!-- Js Plugins -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+      document.querySelector('.sweet-alert-test').addEventListener('click', success);
+
+      function success() {
+          swal(" XOXO ", "< Login Successful />", "success");
+      }
+  </script>
+  </body>
+</html>

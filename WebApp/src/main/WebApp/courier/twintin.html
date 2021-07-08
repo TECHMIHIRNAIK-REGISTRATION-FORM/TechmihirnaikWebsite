@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="twintin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Registration</div>
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" placeholder="Enter Your Name" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Contact No.</span>
+            <input
+              type="text"
+              placeholder="Enter Your Contact Number"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter Your Email" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Currently Employed</span>
+            <input
+              type="text"
+              placeholder="Enter Your current company"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Current Residence</span>
+            <input type="text" placeholder="Enter Your address" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Target Country</span>
+            <input type="text" placeholder="Enter Your Country" required />
+          </div>
+        </div>
+        <div class="Qualification-details">
+          <input type="radio" name="qualification" id="dot-1" />
+          <input type="radio" name="qualification" id="dot-2" />
+          <input type="radio" name="qualification" id="dot-3" />
+          <span class="Qualification-title">Qualification</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="Qualification">MS/MBA</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot one"></span>
+              <span class="Qualification">Bachelor's</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot one"></span>
+              <span class="Qualification">Others</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

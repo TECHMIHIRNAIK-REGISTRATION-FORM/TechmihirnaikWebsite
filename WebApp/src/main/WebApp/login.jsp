@@ -41,7 +41,7 @@
             		<label for="check"><span class="icon"></span> Keep me Signed in</label>
          		</div>
           		<div class="group">
-            		<input type="submit" class="button" value="Sign In" onClick='display();'>
+            		<input type="submit" class="button" value="Sign In">
           		</div>
           		<div id="error"></div>
           	</form>
@@ -51,24 +51,26 @@
           	</div>
         </div>
         <div class="sign-up-htm">
-        	<form action="signup" method="post">
+        	<form action="signup.jsp" method="post">
           		<div class="group">
             		<label for="user" class="label">Username</label>
-            		<input id="user" type="text" class="input" name="uname2">
+            		<input id="user" type="text" class="input" name="uname2" required>
+            		<div id="errorUsername"></div>
           		</div>
           		<div class="group">
             		<label for="pass" class="label">Password :
-    					<input name="password" id="password" class="input" type="password" onkeyup='check();' />
+    					<input name="password" id="password" class="input" type="password" onkeyup='check();' required>
 					</label>
 					<br>
 					<label for="pass" class="label">Confirm Password:
-    					<input type="password" name="confirm_password" id="confirm_password" class="input" onkeyup='check();' /> 
+    					<input type="password" name="confirm_password" id="confirm_password" class="input" required onkeyup='check();' required> 
     					<span id='message'></span>
 					</label>
           		</div>
           		<div class="group">
             		<label for="pass" class="label">Email Address</label>
-            		<input id="pass" type="email" class="input" name="email">
+            		<input id="pass" type="email" class="input" name="email" required>
+            		<div id="errorEmail"></div>
           		</div>
           		<div class="group">
             		<input type="submit" class="button" value="Sign Up" id="signupsubmit">
@@ -77,6 +79,7 @@
           		<div class="foot-lnk">
             		<label for="tab-1">Already Member?</label>
           		</div>
+          		<div id="error2"></div>
           	</form>
         </div>
       </div>
@@ -103,43 +106,53 @@ pageEncoding="ISO-8859-1"%>
 
 	try
 	{
-		//storing credentials entered by user
-		String loginid = request.getParameter("uname");
-		String loginPass = request.getParameter("pass");
-		
-		//registering the driver class
-		Class.forName("com.mysql.jdbc.Driver");
-		//connection to the database
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techmihirnaik","root","2001hridya");
-		st = con.createStatement();
-		//executing query to fetch the database records
-		rs =st.executeQuery(query);
-		
-		//validation of credentials
-		while(rs.next())
+		request.getSession();
+		if(session.getAttribute("username")!=null)
 		{
-			//getting account id and pin from database
-			String accountid = rs.getString(1);
-			String pin = rs.getString(2);
+			session.invalidate();
+			response.sendRedirect("/");
+		}
+		else
+		{
+			/* if(request.getParameter("uname")==null)
+				response.sendRedirect("login"); */
+			//storing credentials entered by user
+			String loginid = request.getParameter("uname");
+			String loginPass = request.getParameter("pass");
 			
-			if(accountid.equals(loginid))
+			//registering the driver class
+			Class.forName("com.mysql.jdbc.Driver");
+			//connection to the database
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/u870519312_techmihirnaik","u870519312_admin","Admin@2410");
+			st = con.createStatement();
+			//executing query to fetch the database records
+			rs =st.executeQuery(query);
+			//validation of credentials
+			while(rs.next())
 			{
-				if(pin.equals(loginPass)) //credentials verified
+				//getting account id and pin from database
+				String accountid = rs.getString(1);
+				String pin = rs.getString(2);
+				
+				if(accountid.equals(loginid))
 				{
-					response.sendRedirect("index.html");
+					if(pin.equals(loginPass)) //credentials verified
+					{
+						//out.print(request.toString());
+						session.setAttribute("username", loginid);
+						response.sendRedirect("/");
+					}
 				}
 			}
+			if(loginid!=null)
+			{
+				out.println("<script>");
+				out.println("document.getElementById('error').style.color = 'red';");
+				out.println("document.getElementById('error').innerText='Sorry UserName or Password error';");
+				out.println("</script>");
+			}
 		}
-		out.println("<script>");
-		out.println("function display() {");
-		out.println("document.getElementById('error').style.color = 'red';");
-		out.println("document.getElementById('error').innerText='Sorry UserName or Password error';}");
-		out.println("</script>");
 	}
 	
-	catch(Exception e){
-		out.print(e.getMessage());
-	}
-	
-	//redirection to login page
+	catch(Exception e){}
 %>
