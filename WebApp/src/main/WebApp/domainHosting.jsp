@@ -10,7 +10,7 @@ pageEncoding="ISO-8859-1"%>
         //registering the driver class
         Class.forName("com.mysql.jdbc.Driver");
         //establishing connection to the database
-        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/u870519312_techmihirnaik","u870519312_admin","Admin@2410");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techmihirnaik","root","2001hridya");
         Statement st = con.createStatement();
         ResultSet rs = null;
 
@@ -23,13 +23,13 @@ pageEncoding="ISO-8859-1"%>
         String domainDetails=request.getParameter("domaindetails");
         String time=request.getParameter("timeToCall");
 
-        st.executeUpdate("INSERT INTO `u870519312_techmihirnaik`.`businesscloud` (`Name`, `Company`, `Email`, `Designation`, `CallingNumber`, `WhatsappNumber`, `DomainDetails`, `PreferredCallTime`) VALUES ('"+name+"', '"+company_name+"', '"+email+"', '"+designation+"','"+phone_call+"', '"+phone_whatsapp+"', '"+domainDetails+"', '"+time+"');");
+        st.executeUpdate("INSERT INTO `techmihirnaik`.`domainhosting` (`Name`, `Company`, `Email`, `Designation`, `CallingNumber`, `WhatsappNumber`, `DomainDetails`, `PreferredCallTime`) VALUES ('"+name+"', '"+company_name+"', '"+email+"', '"+designation+"','"+phone_call+"', '"+phone_whatsapp+"', '"+domainDetails+"', '"+time+"');");
         RequestDispatcher reqdisp1 = request.getRequestDispatcher("technical");
         reqdisp1.forward(request, response);
 
     }
     catch(Exception e){
-    	e.getMessage();
+    	out.println(e.getMessage());
     }
 
 %>

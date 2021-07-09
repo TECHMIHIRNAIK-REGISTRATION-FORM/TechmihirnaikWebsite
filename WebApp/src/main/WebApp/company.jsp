@@ -43,7 +43,7 @@
                         <li style="color: #fff;"><a href="/">Home</a></li>
                         <li><a href="about">About</a></li>
                         <li><a href="courier">Courier</a></li>
-                        <li><a href="tech">Technical</a></li>
+                        <li><a href="technical">Technical</a></li>
                         <li  class="active"><a href="company">Company</a></li>
                         <li><a href="contact">Contacts</a></li>
                     </ul>

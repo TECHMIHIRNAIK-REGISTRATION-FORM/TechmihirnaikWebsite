@@ -32,10 +32,10 @@ pageEncoding="ISO-8859-1"%>
 				//registering the driver class
 				Class.forName("com.mysql.jdbc.Driver");
 				//connection to the database
-				con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/u870519312_techmihirnaik","u870519312_admin","Admin@2410");
+				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techmihirnaik","root","2001hridya");
 				st = con.createStatement();
 				
-				st.executeUpdate("INSERT INTO `u870519312_techmihirnaik`.`contact` (Name, Email, Phone, Message) VALUES ('"+name+"', '"+email+"', '"+phone+"','"+mess+"');");
+				st.executeUpdate("INSERT INTO `techmihirnaik`.`contact` (Name, Email, Phone, Message) VALUES ('"+name+"', '"+email+"', '"+phone+"','"+mess+"');");
 				RequestDispatcher reqdisp1 = request.getRequestDispatcher("/");
 				reqdisp1.forward(request, response);
 			}

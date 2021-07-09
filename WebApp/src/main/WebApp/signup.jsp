@@ -101,7 +101,7 @@ pageEncoding="ISO-8859-1"%>
 		//registering the driver class
 		Class.forName("com.mysql.jdbc.Driver");
 		//establishing connection to the database
-		Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/u870519312_techmihirnaik","u870519312_admin","Admin@2410");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techmihirnaik","root","2001hridya");
 		Statement st = con.createStatement();
 		ResultSet rs = null;
 		String query = "select * from userprofile";
@@ -139,13 +139,13 @@ pageEncoding="ISO-8859-1"%>
 		}
 		if(update==1)
 		{
-			st.executeUpdate("INSERT INTO `u870519312_techmihirnaik`.`userprofile` (`Username`, `Password`, `Email`) VALUES ('"+username+"', '"+password+"', '"+email+"');");
+			st.executeUpdate("INSERT INTO `techmihirnaik`.`userprofile` (`Username`, `Password`, `Email`) VALUES ('"+username+"', '"+password+"', '"+email+"');");
 			RequestDispatcher reqdisp1 = request.getRequestDispatcher("login");
 			reqdisp1.forward(request, response);
 		}
 	}
 	catch(Exception e){
-		e.getMessage();
+		out.println(e.getMessage());
 	}
 
 %>
